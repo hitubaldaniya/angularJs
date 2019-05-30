@@ -1,0 +1,27 @@
+<div multi="true" *ngIf="posts.length > 0">
+  <div class="row">
+      <div class="col-sm-4">
+      <label for="post-category">Filter Category:</label>
+      <select class="form-control" (change)="onChangeCategory()" [(ngModel)]="postCategory">
+        <option>Food</option>
+        <option>Electronic</option>
+        <option>Saloon</option>
+        <option>Kitchen</option>
+      </select>
+      </div>
+  </div><br/>
+  <!-- {{posts}} -->
+  <div class="" *ngFor="let post of posts">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.content }}</p>
+    <div>
+      <span class="badge float-right">Category: {{ post.category }}</span><span class="badge">Posted: {{ post.oncreated }}</span>         
+    </div>
+    <hr>
+  </div>
+</div>
+<div *ngIf="posts.length <= 0">
+  <div class="col-md-12 text-center">
+      <h3>No post added yet!</h3>
+  </div>
+</div>

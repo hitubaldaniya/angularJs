@@ -1,0 +1,25 @@
+<h1>Create a post</h1>
+<div class="form-group">
+  <div class="row">
+      <div class="col-sm-4">
+      <label for="post-category">Post Category: <span class="text-danger">*</span></label>
+      <select class="form-control" [(ngModel)]="postCategory">
+        <option>Food</option>
+        <option>Electronic</option>
+        <option>Saloon</option>
+        <option>Kitchen</option>
+      </select>
+      </div>
+  </div>
+</div>
+<div class="form-group">
+  <label for="post-title">Post Title <span class="text-danger">*</span></label>
+  <input type="text" class="form-control" placeholder="Post Title" [(ngModel)]="postTitle">
+</div>
+<div class="form-group">
+    <label for="post-postContent">Post Content <span class="text-danger">*</span></label>
+    <input type="text" class="form-control" placeholder="Post Content" [(ngModel)]="postContent">
+</div>
+<div ng-cloak *ngIf="posts.status">{{ posts.msg }}</div>
+<span *ngIf="valid.status">{{ valid.msg }}</span><br/>
+<button (click)="onAddPost()" class="btn btn-primary">Submit Post</button>
