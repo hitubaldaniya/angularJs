@@ -8,6 +8,8 @@ npm start<br />
 ## Run Server
 cd angularJs<br />
 node server.js<br />
+## Create a table at MySQL
+CREATE TABLE `mypolice`.`post` ( `category` VARCHAR(100) NOT NULL , `title` VARCHAR(100) NOT NULL , `content` VARCHAR(500) NOT NULL , `oncreated` DATE NOT NULL ) ENGINE = InnoDB;
 ## Requirements
 NodeJS<br />
 NPM<br />
