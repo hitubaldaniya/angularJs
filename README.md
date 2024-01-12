@@ -9,7 +9,8 @@ npm start<br />
 cd angularJs<br />
 node server.js<br />
 ## Create a table at MySQL
-CREATE TABLE `mypolice`.`post` ( `category` VARCHAR(100) NOT NULL , `title` VARCHAR(100) NOT NULL , `content` VARCHAR(500) NOT NULL , `oncreated` DATE NOT NULL ) ENGINE = InnoDB;
+- CREATE TABLE `mypolice`.`post` ( `category` VARCHAR(100) NOT NULL , `title` VARCHAR(100) NOT NULL, `content` VARCHAR(500) NOT NULL , `oncreated` DATE NOT NULL ) ENGINE = InnoDB;
+- The database connection information is statically defined into the file just for demo project purposes. In real-world project we can not set it up like this.
 ## Requirements
 NodeJS<br />
 NPM<br />
